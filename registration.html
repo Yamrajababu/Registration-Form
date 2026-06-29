@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IPD Admission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>IPD Admission</h2>
+        </div>
+        <form>
+            <div class="form-grid">
+                <div class="left-column">
+                    <div class="form-row">
+                        <label>Application No.</label>
+                        <div class="double-input">
+                            <input type="text" placeholder="000000">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Date</label>
+                        <div class="double-input">
+                            <div class="input-icon">
+                                <input type="date">
+                            </div>
+                            <div class="input-icon small">
+                                <input type="time">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>IPD No/UHD</label>
+                        <div class="triple-input">
+                            <input type="text" placeholder="IPD No">
+                            <input type="text" placeholder="UHD">
+                            <select>
+                                <option>OPD</option>
+                                <option>IPD</option>
+                                <option>Emergency</option>
+                            </select>
+                            <button type="button" class="search-btn">🔍</button>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Patient</label>
+                        <div class="double-input">
+                            <select>
+                                <option>--Select--</option>
+                                <option>New Patient</option>
+                                <option>Existing Patient</option>
+                            </select>
+                            <input type="text" placeholder="Patient Name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Gender</label>
+                        <div class="double-input">
+                            <select>
+                                <option>--Select--</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                            <select>
+                                <option>Hospital</option>
+                                <option>Main Hospital</option>
+                                <option>Branch A</option>
+                                <option>Branch B</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Age/DOB</label>
+                        <div class="age-box">
+                            <input type="number" placeholder="Year">
+                            <input type="number" placeholder="Month">
+                            <input type="number" placeholder="Day">
+                            <div class="input-icon">
+                                <i class="fa-regular fa-calendar"></i>
+                                <input type="date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Consultant</label>
+                        <select>
+                            <option>--Select--</option>
+                            <option>Dr Rajesh Kumar</option>
+                            <option>Dr Priya Sharma</option>
+                            <option>Dr Amit Singh</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label>Department</label>
+                        <select>
+                            <option>--Select--</option>
+                            <option>General Medicine</option>
+                            <option>Cardiology</option>
+                            <option>Orthopedics</option>
+                            <option>Neurology</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label>Room</label>
+                        <div class="double-input">
+                            <select>
+                                <option>--Select--</option>
+                                <option>General Ward</option>
+                                <option>Private Room</option>
+                                <option>ICU</option>
+                            </select>
+                            <input type="text" placeholder="Current Room" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Guardian</label>
+                        <div class="double-input">
+                            <select>
+                                <option>Relation</option>
+                                <option>Father</option>
+                                <option>Mother</option>
+                                <option>Brother</option>
+                                <option>Other</option>
+                            </select>
+                            <input type="text" placeholder="Guardian Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="form-row">
+                        <label>Mobile</label>
+                        <div class="double-input">
+                            <input type="text" placeholder="Mobile 1">
+                            <input type="text" placeholder="Mobile 2">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Email</label>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="form-row">
+                        <label>Address</label>
+                        <textarea placeholder="Address"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label>Occupation</label>
+                        <div class="double-input">
+                            <select>
+                                <option>--Select--</option>
+                                <option>Student</option>
+                                <option>Business</option>
+                                <option>Teacher</option>
+                            </select>
+                            <select>
+                                <option>--Select--</option>
+                                <option>Single</option>
+                                <option>Married</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>State</label>
+                        <div class="double-input">
+                            <select>
+                                <option>--Select--</option>
+                                <option>Bihar</option>
+                                <option>UP</option>
+                            </select>
+                            <select>
+                                <option>Patna</option>
+                                <option>Buxar</option>
+                                <option>Muzaffarpur</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>IPD File No</label>
+                        <input type="text" placeholder="IPD File No">
+                    </div>
+                    <div class="form-row">
+                        <label>Remark</label>
+                        <input type="text" placeholder="Remark">
+                    </div>
+                    <div class="form-row">
+                        <label>Attachment</label>
+                        <div class="attachment-box">
+                            <input type="file">
+                            <button type="button" class="search-btn">🔍</button>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Package</label>
+                        <select>
+                            <option>No</option>
+                            <option>Cash</option>
+                            <option>Insurance</option>
+                            <option>Ayushman Bharat</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="submit">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
