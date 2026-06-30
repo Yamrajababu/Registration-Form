@@ -1,64 +1,45 @@
-const form = document.getElementById("studentForm");
-
-if(form){
-
-    form.addEventListener("submit", function(e){
-
-        e.preventDefault();
-
-        const student = {
-
-            appNo: document.getElementById("appNo").value,
-            name: document.getElementById("name").value,
-            mobile: document.getElementById("mobile").value,
-            email: document.getElementById("email").value,
-            course: document.getElementById("course").value,
-            gender: document.getElementById("gender").value
-
-        };
-
-        localStorage.setItem(
-            student.appNo,
-            JSON.stringify(student)
-        );
-
-        alert("Registration Saved Successfully");
-
-        form.reset();
-    });
+function generateAppNo() {
+    return "APP" + Date.now();
 }
 
-/* Load Existing Registration */
+function saveData() {
 
-window.onload = function(){
+    let appNo = document.getElementById("appNo").value;
 
-    let current =
-        sessionStorage.getItem("currentStudent");
-
-    if(current){
-
-        let student =
-            JSON.parse(localStorage.getItem(current));
-
-        if(student){
-
-            document.getElementById("appNo").value =
-                student.appNo;
-
-            document.getElementById("name").value =
-                student.name;
-
-            document.getElementById("mobile").value =
-                student.mobile;
-
-            document.getElementById("email").value =
-                student.email;
-
-            document.getElementById("course").value =
-                student.course;
-
-            document.getElementById("gender").value =
-                student.gender;
-        }
+    if (appNo == "") {
+        appNo = generateAppNo();
     }
+
+    const patient = {
+        appNo: appNo,
+        patientName: document.getElementById("patientName").value,
+        mobile: document.getElementById("mobile").value,
+        email: document.getElementById("email").value,
+        address: document.getElementById("address").value
+    };
+
+    localStorage.setItem(appNo, JSON.stringify(patient));
+
+    alert("Registration Successful!\nApplication No: " + appNo);
+
+    document.getElementById("appNo").value = appNo;
+}
+
+function searchData() {
+
+    let appNo = document.getElementById("appNo").value;
+
+    let patient = localStorage.getItem(appNo);
+
+    if (patient == null) {
+        alert("Application Number Not Found");
+        return;
+    }
+
+    patient = JSON.parse(patient);
+
+    document.getElementById("patientName").value = patient.patientName;
+    document.getElementById("mobile").value = patient.mobile;
+    document.getElementById("email").value = patient.email;
+    document.getElementById("address").value = patient.address;
 }
