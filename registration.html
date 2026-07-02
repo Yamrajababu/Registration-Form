@@ -11,60 +11,60 @@
         <div class="header">
             <h2>IPD Admission</h2>
         </div>
-        <form>
+        <form id="admissionForm">
             <div class="form-grid">
                 <div class="left-column">
                     <div class="form-row">
                         <label>Application No.</label>
                         <div class="double-input">
-                            <input type="text" placeholder="000000">
+                            <input type="text" id="applicationNo" placeholder="000000">
                         </div>
                     </div>
                     <div class="form-row">
                         <label>Date</label>
                         <div class="double-input">
                             <div class="input-icon">
-                                <input type="date">
+                                <input type="date" id="admissionDate">
                             </div>
                             <div class="input-icon small">
-                                <input type="time">
+                                <input type="time" id="admissionTime">
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <label>IPD No/UHD</label>
                         <div class="triple-input">
-                            <input type="text" placeholder="IPD No">
-                            <input type="text" placeholder="UHD">
-                            <select>
+                            <input type="text" id="ipdNo" placeholder="IPD No">
+                            <input type="text" id="uhdNo" placeholder="UHD">
+                            <select id="admissionType">
                                 <option>OPD</option>
                                 <option>IPD</option>
                                 <option>Emergency</option>
                             </select>
-                            <button type="button" class="search-btn">🔍</button>
+                            <button type="button" id="retrieveBtn" class="search-btn">🔍</button>
                         </div>
                     </div>
                     <div class="form-row">
                         <label>Patient</label>
                         <div class="double-input">
-                            <select>
+                            <select id="patientType">
                                 <option>--Select--</option>
                                 <option>New Patient</option>
                                 <option>Existing Patient</option>
                             </select>
-                            <input type="text" placeholder="Patient Name">
+                            <input type="text" id="patientName" placeholder="Patient Name">
                         </div>
                     </div>
                     <div class="form-row">
                         <label>Gender</label>
                         <div class="double-input">
-                            <select>
+                            <select id="gender">
                                 <option>--Select--</option>
                                 <option>Male</option>
                                 <option>Female</option>
                                 <option>Other</option>
                             </select>
-                            <select>
+                            <select id="hospital">
                                 <option>Hospital</option>
                                 <option>Main Hospital</option>
                                 <option>Branch A</option>
@@ -75,17 +75,17 @@
                     <div class="form-row">
                         <label>Age/DOB</label>
                         <div class="age-box">
-                            <input type="number" placeholder="Year">
-                            <input type="number" placeholder="Month">
-                            <input type="number" placeholder="Day">
+                            <input type="number" id="ageYear" placeholder="Year">
+                            <input type="number" id="ageMonth" placeholder="Month">
+                            <input type="number" id="ageDay" placeholder="Day">
                             <div class="input-icon">
-                                <input type="date">
+                                <input type="date" id="dob">
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <label>Consultant</label>
-                        <select>
+                        <select id="consultant">
                             <option>--Select--</option>
                             <option>Dr Rajesh Kumar</option>
                             <option>Dr Priya Sharma</option>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="form-row">
                         <label>Department</label>
-                        <select>
+                        <select id="department">
                             <option>--Select--</option>
                             <option>General Medicine</option>
                             <option>Cardiology</option>
@@ -105,26 +105,26 @@
                     <div class="form-row">
                         <label>Room</label>
                         <div class="double-input">
-                            <select>
+                            <select id="roomType">
                                 <option>--Select--</option>
                                 <option>General Ward</option>
                                 <option>Private Room</option>
                                 <option>ICU</option>
                             </select>
-                            <input type="text" placeholder="Current Room" readonly>
+                            <input type="text" id="currentRoom" placeholder="Current Room" readonly>
                         </div>
                     </div>
                     <div class="form-row">
                         <label>Guardian</label>
                         <div class="double-input">
-                            <select>
+                            <select id="guardianRelation">
                                 <option>Relation</option>
                                 <option>Father</option>
                                 <option>Mother</option>
                                 <option>Brother</option>
                                 <option>Other</option>
                             </select>
-                            <input type="text" placeholder="Guardian Name">
+                            <input type="text" id="guardianName" placeholder="Guardian Name">
                         </div>
                     </div>
                 </div>
@@ -132,28 +132,28 @@
                     <div class="form-row">
                         <label>Mobile</label>
                         <div class="double-input">
-                            <input type="text" placeholder="Mobile 1">
-                            <input type="text" placeholder="Mobile 2">
+                            <input type="text" id="mobile1" placeholder="Mobile 1">
+                            <input type="text" id="mobile2" placeholder="Mobile 2">
                         </div>
                     </div>
                     <div class="form-row">
                         <label>Email</label>
-                        <input type="email" placeholder="Email">
+                        <input type="email" id="email"  placeholder="Email">
                     </div>
                     <div class="form-row">
                         <label>Address</label>
-                        <textarea placeholder="Address"></textarea>
+                        <textarea id="address" placeholder="Address"></textarea>
                     </div>
                     <div class="form-row">
                         <label>Occupation</label>
                         <div class="double-input">
-                            <select>
+                            <select id="occupation">
                                 <option>--Select--</option>
                                 <option>Student</option>
                                 <option>Business</option>
                                 <option>Teacher</option>
                             </select>
-                            <select>
+                            <select id="maritalStatus">
                                 <option>--Select--</option>
                                 <option>Single</option>
                                 <option>Married</option>
@@ -163,12 +163,12 @@
                     <div class="form-row">
                         <label>State</label>
                         <div class="double-input">
-                            <select>
+                            <select id="state">
                                 <option>--Select--</option>
                                 <option>Bihar</option>
                                 <option>UP</option>
                             </select>
-                            <select>
+                            <select id="city">
                                 <option>Patna</option>
                                 <option>Buxar</option>
                                 <option>Muzaffarpur</option>
@@ -177,11 +177,11 @@
                     </div>
                     <div class="form-row">
                         <label>IPD File No</label>
-                        <input type="text" placeholder="IPD File No">
+                        <input type="text" id="ipdFileNo" placeholder="IPD File No">
                     </div>
                     <div class="form-row">
                         <label>Remark</label>
-                        <input type="text" placeholder="Remark">
+                        <input type="text" id="remark" placeholder="Remark">
                     </div>
                     <div class="form-row">
                         <label>Attachment</label>
@@ -192,7 +192,7 @@
                     </div>
                     <div class="form-row">
                         <label>Package</label>
-                        <select>
+                        <select id="package">
                             <option>No</option>
                             <option>Cash</option>
                             <option>Insurance</option>
@@ -201,11 +201,13 @@
                     </div>
                 </div>
                 <div class="submit">
-                    <button type="submit">Submit</button>
+                    <button type="submit">Save Registration</button>
+                    <button type="reset" id="clearBtn">Clear Form</button>
                 </div>
             </div>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
